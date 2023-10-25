@@ -1,0 +1,245 @@
+*,
+*::after,
+*::before{
+    padding: 0;
+    margin: 0;
+    outline: none;
+    box-sizing: border-box;
+}
+
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;600;800;900&display=swap'); */
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: url('./1.jpg');
+}
+
+.todo-section{
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 100px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.top-data h2{
+    font-size: 20px;
+    font-weight: 400;
+    padding: 10px 0px;
+}
+
+.top-info label{
+    font-size: 100px;
+    font-weight: 100;
+    color: royalblue;
+}
+
+.top-info a{
+    color: royalblue;
+}
+
+.todo-create{
+    padding: 50px 0px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+}
+
+.todo-create input{
+    width: 100%;
+    font-size: 18px;
+    padding: 10px 30px 10px 14px;
+    border-radius: 10px;
+}
+
+.todo-create input:focus{
+    border: 2px royalblue solid;
+    color: royalblue;
+}
+
+.todo-create button{
+    align-self: flex-end;
+    font-size: 22px;
+    padding: 10px 22px;
+    border-radius: 8px;
+    background-color: white;
+    color: royalblue;
+    border: 2px royalblue solid;
+    cursor: pointer;
+    transition: transform .01s, background-color .3s, color .5s ease;
+    user-select: none;
+}
+
+.todo-create button:hover{
+    background-color: royalblue;
+    color: white;
+}
+
+.todo-create button:active{
+    transform: scale(1.2);
+}
+
+.error-message{
+    color: crimson;
+    position: absolute;
+    top: 45%;
+    left: 3%;
+}
+
+.todo-lists{
+    list-style: none;
+}
+
+.todo-lists li{
+    display: flex;
+    background-color: white;
+    align-items: center;
+    padding: 10px 0px;
+    padding-left: 15px;
+    border: 1px solid gray;
+    border-radius: 6px;
+    font-size: 18px;
+    user-select: none;
+}
+
+.list-content{
+    flex: 5;
+}
+
+.list-time{
+    flex: 4;
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+
+.list-time i{
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.modal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(8px);
+    position: fixed;
+    inset: 0;
+
+    display: none;
+    z-index: -9999;
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+}
+
+.modal.active{
+    display: flex;
+    z-index: 9999;
+    opacity: 1;
+    pointer-events: all;
+    visibility: visible;
+}
+
+.modal-inner{
+    background-color: white;
+    width: 100%;
+    max-width: 500px;
+    padding: 15px;
+    font-size: 28px;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-top{
+    display: flex;
+    justify-content: space-between;
+}
+
+#modal-exit{
+    cursor: pointer;
+}
+
+#modal-input{
+    width: 100%;
+    padding: 8px 15px;
+    font-size: 18px;
+    margin: 20px 0px;
+    border: 2px solid grey;
+    border-radius: 5px;
+}
+
+#modal-input:focus{
+    border-color:  royalblue;
+}
+
+#modal-input:focus::placeholder{
+    color: royalblue;
+}
+
+.modal-inner{
+    position: relative;
+}
+
+.modal-inner button{
+    align-self: flex-end;
+    font-size: 18px;
+    padding: 10px 22px;
+    border-radius: 8px;
+    background-color: white;
+    color: royalblue;
+    border: 2px royalblue solid;
+    cursor: pointer;
+    transition: transform .01s, background-color .3s, color .5s ease;
+    user-select: none;
+
+}
+
+.modal-inner button:hover{
+    background-color: royalblue;
+    color: white;
+}
+
+.modal-inner button:active{
+    transform: scale(1.2);
+}
+
+
+.error-messag{
+    color: crimson;
+    position: absolute;
+    top: 60%;
+    font-size: 18px;
+    left: 3%;
+}
+
+.dblclicks{
+    opacity: .5;
+}
+
+.tools{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    position: relative;
+}
+
+#search{
+    max-width: 300px;
+    width: 100%;
+}
+.searchBtn{
+    position: absolute;
+    left: 45%;
+    font-size: 22px;
+    top: 20%;
+    cursor: pointer;
+    z-index: 9;
+}
